@@ -15,8 +15,8 @@ Package.onUse(function(api) {
         'templating',
         'less',
         'tracker',
-        'mrt:moment@2.8.1',
-        'aldeed:autoform@4.2.2 || 5.1.2'
+        'mrt:moment',
+        'aldeed:autoform'
       ],
       both);
 
