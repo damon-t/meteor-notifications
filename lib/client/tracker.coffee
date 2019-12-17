@@ -1,2 +1,2 @@
-Deps.autorun ->
-  Meteor.subscribe('notifications')
+Tracker.autorun ->
+  Meteor.subscribe('userNotifications')

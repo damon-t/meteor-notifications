@@ -1,27 +1,53 @@
 <template name="notificationsDropdown">
-  <li class="dropdown notificationsDropdown">
-    <a href="#" class="notification">
-      {{#if notificationCount}}
-        <i class="fa fa-{{dropdownIcon}}"></i>
-        <span class="badge bg-success">{{notificationCount}}</span>
-      {{else}}
-        <i class="fa fa-{{dropdownIconEmpty}}"></i>
-      {{/if}}
-    </a>
-
-    <ul class="dropdown-menu" role="menu">
-      {{#if hasNotifications}}
+<li class="nav-item dropdown dropdown-list">
+  <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
+    <em class="icon-bell"></em>
+    <span class="badge badge-danger">{{notificationCount}}</span>
+  </a>
+  <!-- START Dropdown menu-->
+  <div class="dropdown-menu dropdown-menu-right animated flipInX">
+    <div class="dropdown-item">
+      <!-- START list group-->
+      <div class="list-group">
+        {{#if hasNotifications}}
         {{#each Notifications limit=5 unreadFirst=true}}
-          <li class="notification {{notificationClass}}">
-            <a href="{{link}}"><i class="fa fa-{{icon}} fa-fw text-{{class}}"></i> {{title}}</a>
-          </li>
+        <!-- list item-->
+        <div class="list-group-item list-group-item-action notification {{notificationClass}}">
+          
+            <div class="media">
+              <div class="align-self-start mr-2">
+                <em class="fas fa-{{icon}} fa-2x text-{{class}}"></em>
+              </div>
+              <div class="media-body">
+                <p class="m-0"><a href="{{link}}">{{title}}</a></p>
+                <p class="m-0 text-muted text-sm">{{message}}</p>
+              </div>
+            </div>
+          
+        </div>
+        <!-- list item-->
         {{/each}}
-        <li class="text-center"><a href="/notifications">See all</a></li>
-      {{else}}
-        <li><div class="well-sm">0 Notifications</div></li>
-      {{/if}}
-    </ul>
-  </li>
+        <div class="list-group-item list-group-item-action">
+          <span class="d-flex align-items-center">
+            <span class="text-sm">
+              <li class="text-center"><a href="/notifications">Zeige alle</a></li>
+            </span>
+            <span class="badge badge-danger ml-auto">{{notificationCount}}</span>
+          </span>
+        </div>
+        {{else}}
+        <li>
+          <div class="well-sm">0 Notifications</div>
+        </li>
+{{/if}}
+<!-- last list item-->
+
+</div>
+<!-- END list group-->
+</div>
+</div>
+<!-- END Dropdown menu-->
+</li>
 </template>
 
 <template name="notifications">

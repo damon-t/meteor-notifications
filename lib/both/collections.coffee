@@ -1,10 +1,11 @@
-@Notifications = new Meteor.Collection 'notifications'
+@Notifications = new Meteor.Collection 'userNotifications'
 
 Notifications.new = (doc) ->
   if typeof doc.owner == 'undefined'
     doc.owner = Meteor.userId()
 
   Notifications.insert(doc)
+  
 
 Notifications.readAll = ->
   Meteor.call 'readAllNotifications'
@@ -22,6 +23,9 @@ Schemas.Notifications = new SimpleSchema
     optional: true
 
   title:
+    type:String
+
+  message:
     type:String
 
   read:

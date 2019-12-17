@@ -1,4 +1,5 @@
 Package.describe({
+  name: 'damon:meteor-notifications',
   summary: "Adds notification functionality",
   version: "0.1.0",
   git: "http://github.com/yogiben/meteor-notifications.git"
@@ -7,7 +8,7 @@ Package.describe({
 both = ['client', 'server'];
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.8');
 
   api.use(
       [
@@ -16,7 +17,8 @@ Package.onUse(function(api) {
         'less',
         'tracker',
         'mrt:moment',
-        'aldeed:autoform'
+        'aldeed:simple-schema',
+        'aldeed:autoform',
       ],
       both);
 
