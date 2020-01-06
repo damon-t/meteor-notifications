@@ -2,10 +2,11 @@ Meteor Notifications
 ====================
 
 Easy notification functionality in meteor.
+Based on yogiben:notifications
 
-    meteor add yogiben:notifications
+    meteor add odem:notifications
 
-[See a demo](http://yogiben-favorites.meteor.com/dashboard)
+
 
 ### Screenshots ###
 
