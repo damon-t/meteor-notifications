@@ -14,8 +14,11 @@ Template.notificationsDropdown.helpers
     Notifications.find().count() > 0
 
 Template.notificationsDropdown.events
-  'click .notification': readNotification
-
+  'click .notification': ->
+    readNotification
+  'click .readAll': ->
+    Notifications.readAll()
+    
 Template.notifications.helpers
   notificationClass: notificationClass
   ago: ->
