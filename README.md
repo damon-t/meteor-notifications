@@ -2,10 +2,8 @@ Meteor Notifications
 ====================
 
 Easy notification functionality in meteor.
-Based on yogiben:notifications
 
     meteor add odem:notifications
-
 
 
 ### Screenshots ###
@@ -22,7 +20,7 @@ Based on yogiben:notifications
 
 3. Create new notification
 
-        Notifications.new({ title: 'New message', link: '/messages/1' });
+        Notifications.new({ title: 'New title', message: 'New Message', link: '/messages/1' });
 
 
 ### Helpers ###
@@ -75,7 +73,8 @@ This is simple bootstrap panel with listing of all user notifications.
 
 ```js
 Notifications.new
-  title: 'New message'
+  title: 'New title'
+  message: 'New message'
   link: '/messages/1'
   icon: 'bolt'
   class: 'default'
@@ -84,6 +83,8 @@ Notifications.new
 This method inserts new notification into ``Notifications`` collection.
 
 ``title`` and ``link`` are used to create link to notification.
+
+``message`` is for detailed information .
 
 ``icon`` is font-awesome icon class name displayed with in notification link.
 

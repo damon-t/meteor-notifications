@@ -18,7 +18,7 @@ Template.notificationsDropdown.events
     readNotification
   'click .readAll': ->
     Notifications.readAll()
-    
+
 Template.notifications.helpers
   notificationClass: notificationClass
   ago: ->

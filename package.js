@@ -1,24 +1,24 @@
 Package.describe({
-  name: 'damon:meteor-notifications',
+  name: 'odem:notifications',
   summary: "Adds notification functionality",
-  version: "0.1.0",
-  git: "http://github.com/yogiben/meteor-notifications.git"
+  version: "0.3.1",
+  git: "https://github.com/damon-t/meteor-notifications"
 });
 
 both = ['client', 'server'];
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.8');
+  api.versionsFrom('1.8');
 
   api.use(
       [
-        'coffeescript',
-        'templating',
+        'coffeescript@1.0.17',
+        'templating@1.3.2',
         'less',
         'tracker',
-        'mrt:moment',
-        'aldeed:simple-schema',
-        'aldeed:autoform',
+        'mrt:moment@1.7.0',
+        'aldeed:simple-schema@1.5.4',
+        'aldeed:autoform@6.3.0',
       ],
       both);
 
