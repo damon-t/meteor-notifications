@@ -1,7 +1,7 @@
 Package.describe({
   name: 'odem:notifications',
   summary: "Adds notification functionality",
-  version: "0.3.1",
+  version: "0.3.2",
   git: "https://github.com/damon-t/meteor-notifications"
 });
 
@@ -18,7 +18,7 @@ Package.onUse(function(api) {
         'tracker',
         'mrt:moment@1.7.0',
         'aldeed:simple-schema@1.5.4',
-        'aldeed:autoform@6.3.0',
+        'aldeed:autoform@7.0.0',
       ],
       both);
 
